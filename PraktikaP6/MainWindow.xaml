@@ -1,0 +1,28 @@
+﻿<Window x:Class="PraktikaP6.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:PraktikaP6"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="450" Width="1600">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition/>
+            <RowDefinition Height="3*"/>
+            <RowDefinition/>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="1*"/>
+            <ColumnDefinition Width="2*"/>
+            <ColumnDefinition Width="1*"/>
+        </Grid.ColumnDefinitions>
+        <Button HorizontalAlignment="Center" VerticalAlignment="Center" Height="53" Width="404" Click="Button_Click" Background="#FFDDDDDD">
+            <Button Content="Таблица Пользователи" HorizontalAlignment="Left" VerticalAlignment="Top"/>
+        </Button>
+        <Button HorizontalAlignment="Center" VerticalAlignment="Center" Height="53" Width="404" Grid.Column="2" Click="Button_Click_1">
+            <Button Content="Таблица Задачи" HorizontalAlignment="Left" VerticalAlignment="Top"/>
+        </Button>
+        <Frame x:Name="PageFrame" Grid.Row="1" Grid.Column="1"/>
+    </Grid>
+</Window>
