@@ -5,8 +5,8 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:PraktikaP6"
         mc:Ignorable="d"
-        Title="MainWindow" Height="450" Width="1600">
-    <Grid>
+        Title="MainWindow" Height="450" Width="1200">
+    <Grid Background="DarkCyan">
         <Grid.RowDefinitions>
             <RowDefinition/>
             <RowDefinition Height="3*"/>

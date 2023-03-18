@@ -58,6 +58,9 @@
     <Compile Include="First_page.xaml.cs">
       <DependentUpon>First_page.xaml</DependentUpon>
     </Compile>
+    <Compile Include="PraktikaLoveDataSet.cs">
+      <DependentUpon>PraktikaLoveDataSet.xsd</DependentUpon>
+    </Compile>
     <Compile Include="Second_page.xaml.cs">
       <DependentUpon>Second_page.xaml</DependentUpon>
     </Compile>
@@ -132,6 +135,9 @@
   </ItemGroup>
   <ItemGroup>
     <Resource Include="18942915_51544.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="мансер.jpg" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
