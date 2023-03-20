@@ -23,6 +23,6 @@
         <Button HorizontalAlignment="Center" VerticalAlignment="Center" Height="53" Width="404" Grid.Column="2" Click="Button_Click_1">
             <Button Content="Таблица Задачи" HorizontalAlignment="Left" VerticalAlignment="Top"/>
         </Button>
-        <Frame x:Name="PageFrame" Grid.Row="1" Grid.Column="1"/>
+        <Frame x:Name="PageFrame" Grid.Row="1" Grid.Column="1" NavigationUIVisibility="Hidden"/>
     </Grid>
 </Window>

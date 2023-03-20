@@ -8,28 +8,33 @@
       d:DesignHeight="450" d:DesignWidth="1600"
       Title="First_page">
 
-    <Grid>
+    <Grid >
         <Grid.RowDefinitions>
             <RowDefinition Height="2*"/>
-            <RowDefinition Height="1*"/>
-            <RowDefinition Height="1*"/>
+            <RowDefinition Height="0.2*"/>
+            <RowDefinition Height="0.4*"/>
+            <RowDefinition Height="0.2*"/>
+            <RowDefinition Height="0.4*"/>
         </Grid.RowDefinitions>
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="1*"/>
             <ColumnDefinition Width="1*"/>
             <ColumnDefinition Width="1*"/>
         </Grid.ColumnDefinitions>
-        <DataGrid x:Name="usersGrid" Grid.Column="0" Grid.Row="0" Grid.ColumnSpan="3"/>
-        <Frame x:Name="PageFrame1"/>
-        <Button HorizontalAlignment="Center" VerticalAlignment="Top" Height="29" Width="404" Click="Button_Click_2" Grid.Column="1" Grid.Row="2">
+        <Frame x:Name="PageFrame1" Grid.Row="1" Grid.Column="1" NavigationUIVisibility="Hidden"/>
+        <DataGrid x:Name="usersGrid" Grid.Column="0" Grid.Row="0" Grid.ColumnSpan="3" SelectionChanged="UsersGrid_SelectionChanged" CanUserAddRows="False" IsSynchronizedWithCurrentItem="True"/>
+        <Button Click="Button_Click_2" Grid.Column="1" Grid.Row="2">
             <Button Content="Добавить элемент" HorizontalAlignment="Left" VerticalAlignment="Top"/>
         </Button>
-        <Button HorizontalAlignment="Center" VerticalAlignment="Bottom" Height="30" Width="340" Click="Button_Click_3" Grid.Column="1" Grid.Row="1" >
-            <Button Content="Удалить" HorizontalAlignment="Center" VerticalAlignment="Bottom"/>
+        <Button Click="Button_Click_3" Grid.Column="3" Grid.Row="2" >
+            <Button Content="Удалить" HorizontalAlignment="Center" VerticalAlignment="Top"/>
         </Button>
-        <TextBox x:Name="nametabl" HorizontalAlignment="Left" TextWrapping="Wrap" Text="1" VerticalAlignment="Top" Width="523" Height="34" Grid.Column="0" Grid.Row="3"/>
-        <TextBox x:Name="emailtabl" HorizontalAlignment="Left" TextWrapping="Wrap" Text="2" VerticalAlignment="Top" Width="523" Height="34" Grid.Column="2" Grid.Row="2"/>
-        <TextBlock HorizontalAlignment="Center" VerticalAlignment="Bottom" Grid.Column="2" Grid.Row="1" TextWrapping="Wrap" Text="Email"/>
-        <TextBlock HorizontalAlignment="Center" VerticalAlignment="Bottom" Grid.Column="0" Grid.Row="1" TextWrapping="Wrap" Text="Имя пользователя"/>
+        <Button Click="Button_Click" Grid.Column="0" Grid.Row="2" >
+            <Button Content="Изменить" HorizontalAlignment="Center" VerticalAlignment="Top"/>
+        </Button>
+        <TextBox x:Name="nametabl" TextWrapping="Wrap" Grid.Column="0" Grid.Row="4" />
+        <TextBox x:Name="emailtabl" TextWrapping="Wrap" Grid.Column="2" Grid.Row="4"/>
+        <TextBlock Text="Email" Grid.Column="2" Grid.Row="3" TextWrapping="Wrap" VerticalAlignment="Center" HorizontalAlignment="Center"/>
+        <TextBlock Text="Имя пользователя" HorizontalAlignment="Center" VerticalAlignment="Center" Grid.Column="0" Grid.Row="3" TextWrapping="Wrap"/>
     </Grid>
 </Page>

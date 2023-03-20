@@ -29,5 +29,25 @@ namespace PraktikaP6
 
             usersGrid.ItemsSource = user.GetData();
         }
+
+        private void Button_Click(object sender, RoutedEventArgs e)
+        {
+            if (usersGrid.SelectedItem != null)
+            {
+                int id = (int)(usersGrid.SelectedItem as DataRowView).Row[0];
+                user.UpdateQuery(nametabl.Text, emailtabl.Text, id);
+                usersGrid.ItemsSource = user.GetData();
+            }
+        }
+
+        private void UsersGrid_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        {
+            if (usersGrid.SelectedItem != null)
+            {
+                var vibor = usersGrid.SelectedItem as DataRowView;
+                nametabl.Text = (string)vibor.Row[1];
+                emailtabl.Text = (string)vibor.Row[2];
+            }
+        }
     }
 }

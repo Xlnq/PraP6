@@ -32,5 +32,29 @@ namespace PraktikaP6
             
             tasksGrid.ItemsSource = task.GetData();
         }
+
+        private void Button_Click(object sender, System.Windows.RoutedEventArgs e)
+        {
+            if (tasksGrid.SelectedItem != null)
+            {
+                int id = (int)(tasksGrid.SelectedItem as DataRowView).Row[0];
+                int iduser = (int)idtabl.SelectedValue;
+                task.UpdateQuery(nametabl.Text, descriptiontabl.Text, datetabl.Text, iduser, id);
+                tasksGrid.ItemsSource = task.GetData();
+            }
+        }
+
+       
+        private void TasksGrid_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        {
+            if (tasksGrid.SelectedItem != null)
+            {
+                var vibor = tasksGrid.SelectedItem as DataRowView;
+                nametabl.Text = (string)vibor.Row[1];
+                descriptiontabl.Text = (string)vibor.Row[2];
+                datetabl.Text = (string)vibor.Row[3];
+                idtabl.SelectedValue = (int)vibor.Row[4];
+            }
+        }
     }
 }
